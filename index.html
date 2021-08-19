@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourism</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <section class="showcase">
+      <header>
+        <h2 class="logo">Travel</h2>
+        <div class="toggle"></div>
+      </header>
+
+      <video src="video2a.mp4" autoplay loop muted></video>
+
+      <div class="overlay"></div>
+
+      <div class="text">
+        <h2>Never stop</h2>
+        <h3>Exploring The World</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+          corrupti perferendis ad ipsam non nihil cupiditate tenetur officia
+          vero porro..
+        </p>
+        <a href="#">Explore</a>
+      </div>
+
+      <ul class="icons">
+        <li>
+          <a href="https://twitter.com/" target="_blank"
+            ><i class="fab fa-twitter fa-2x fa-color"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/instagram/?hl=en" target="_blank"
+            ><i class="fab fa-instagram fa-2x fa-color"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/login/" target="_blank"
+            ><i class="fab fa-facebook fa-2x fa-color"></i
+          ></a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="News.html">News</a></li>
+        <li><a href="Destination.html">Destination</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <script>
+      const menuToggle = document.querySelector(".toggle");
+      const showcase = document.querySelector(".showcase");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        showcase.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

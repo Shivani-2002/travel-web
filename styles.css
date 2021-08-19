@@ -1,0 +1,339 @@
+@font-face {
+  font-family: myFonts;
+  src: url(AusionPersonalUse-Extra.otf);
+}
+:root {
+  --bluiush-color: #03a9f4;
+  --greyish-color: #c2d3db;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.showcase {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+  /* font-family:Georgia, 'Times New Roman', Times, serif; */
+  /* font-family:Arial, Helvetica, sans-serif; */
+  /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+  position: absolute;
+  right: 0 px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  color: white;
+  /* transition:2s; */
+  z-index: 2;
+  animation: mymove1 2s forwards;
+}
+@keyframes mymove1 {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 0px;
+  }
+  from {
+    color: #c2d3db;
+  }
+  to {
+    color: white;
+  }
+}
+
+.showcase.active {
+  animation: mymove 2s forwards;
+}
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -300px;
+  }
+  from {
+    color: white;
+  }
+  to {
+    color: #c2d3db;
+  }
+}
+.showcase header {
+  font-family: myFonts;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.toggle {
+  position: relative;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background: url("hamburgerrr.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+}
+.toggle.active {
+  position: relative;
+  cursor: pointer;
+  background: url("crosss.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+}
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(161, 21, 154); */
+  /* background-color: #5ca6c9; */
+  /* background-color: #3978ec; */
+  background-color: #5591ad;
+  /* background-color: var(--bluiush-color); */
+  mix-blend-mode: overlay;
+}
+.text {
+  position: relative;
+  z-index: 10;
+}
+
+.text h2 {
+  font-size: 4em;
+  /* font-weight: 1800; */
+  text-transform: uppercase;
+  line-height: 2em;
+}
+.text h3 {
+  font-size: 2.5em;
+  /* font-weight: 1800; */
+  text-transform: uppercase;
+  line-height: 2em;
+}
+.text p {
+  font-size: 1.1em;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: white;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.text a:hover {
+  /* transform:scale(1.2); */
+  letter-spacing: 6px;
+}
+
+.icons {
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons li {
+  list-style: none;
+}
+
+.icons li a {
+  margin-right: 15px;
+}
+.fa-twitter {
+  color: rgb(119, 204, 230);
+  transform: scale(0.9);
+  transition: 0.3s;
+}
+.fa-twitter:hover {
+  transform: scale(1.3) translateY(-10px);
+}
+
+.fa-instagram {
+  color: rgb(199, 36, 158);
+  transform: scale(0.9);
+  transition: 0.3s;
+}
+.fa-instagram:hover {
+  transform: scale(1.3) translateY(-10px);
+}
+
+.fa-facebook {
+  color: #0c2d75;
+  transform: scale(0.9);
+  transition: 0.3s;
+}
+.fa-facebook:hover {
+  transform: scale(1.3) translateY(-10px);
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: myFonts;
+  /* background-color: #c3e4f1; */
+
+  /* font-family:Georgia, 'Times New Roman', Times, serif; */
+  /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+}
+.menu ul {
+  position: relative;
+  list-style: none;
+}
+.menu ul li a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #111;
+}
+.menu ul li a:hover {
+  /* color:#03a9f4;  */
+  color: var(--bluiush-color);
+}
+
+@media (max-width: 890px) {
+  .showcase,
+  .showcase header {
+    padding: 40px 20px 40px 20px;
+  }
+  .text h2 {
+    font-size: 2.5em;
+  }
+  .text h3 {
+    font-size: 1.5em;
+  }
+
+  @keyframes mymove1 {
+    from {
+      left: -200px;
+    }
+    to {
+      left: 0px;
+    }
+    from {
+      color: #c2d3db;
+    }
+    to {
+      color: white;
+    }
+  }
+
+  @keyframes mymove {
+    from {
+      left: 0px;
+    }
+    to {
+      left: -200px;
+    }
+    from {
+      color: white;
+    }
+    to {
+      color: #c2d3db;
+    }
+  }
+
+  .menu {
+    width: 200px;
+  }
+
+  .menu ul li a {
+    font-size: 22.5px;
+  }
+}
+
+@media (max-width: 890px) {
+  .showcase,
+  .showcase header {
+    padding: 40px 20px 40px 20px;
+  }
+  .text h2 {
+    font-size: 2.5em;
+  }
+  .text h3 {
+    font-size: 1.5em;
+  }
+
+  @keyframes mymove1 {
+    from {
+      left: -200px;
+    }
+    to {
+      left: 0px;
+    }
+    from {
+      color: #c2d3db;
+    }
+    to {
+      color: white;
+    }
+  }
+
+  @keyframes mymove {
+    from {
+      left: 0px;
+    }
+    to {
+      left: -200px;
+    }
+    from {
+      color: white;
+    }
+    to {
+      color: #c2d3db;
+    }
+  }
+
+  .menu {
+    width: 200px;
+  }
+
+  .menu ul li a {
+    font-size: 22.5px;
+  }
+}
